@@ -3,17 +3,18 @@
 public class Main {
     public static void main(String[] args) {
 
-        int score = 100; // начальный счёт
-        int deposit = 1550; // пополнение
+        int initialBalance = 1_100; // начальный счёт
+        int addend = 4_550; // пополнение
         int bonus = 1;
 
-        if (deposit >= 1000) {
-            bonus = deposit / 100;
+        if (addend > 1_000) {
+            bonus = addend / 100;
         }
 
-        int balance = score + deposit + bonus;
+        int finalBalance = initialBalance + addend + bonus;
 
-        System.out.println(balance);
+        System.out.println("Бонус: " + bonus);
+        System.out.println("Итоговый счёт: " + finalBalance);
         
     }
 }
